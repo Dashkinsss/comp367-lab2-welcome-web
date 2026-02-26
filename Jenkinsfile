@@ -8,9 +8,7 @@ pipeline {
 
     stage('Build') {
       steps {
-        dir('welcome-web') {
-          sh '/usr/local/bin/mvn -B clean package'
-        }
+        sh '/usr/local/bin/mvn -B clean package'
       }
     }
   }
