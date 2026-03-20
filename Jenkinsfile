@@ -2,17 +2,16 @@ pipeline {
     agent any
     
     tools {
-        // Убедитесь, что в Jenkins настроен Maven с именем "MAVEN3"
-        // Manage Jenkins -> Tools -> Maven installations -> Name: MAVEN3
+        
         maven "MAVEN3"
     }
     
     environment {
-        // Credentials ID для Docker Hub пароля
+        
         DOCKERHUB_PWD = credentials('CredentialID_DockerHubPWD')
         
-        // ВАЖНО: Замените на ваш Docker Hub username!
-        DOCKER_USERNAME = 'd240605d'  // <--- ЗАМЕНИТЕ НА ВАШ DOCKER HUB USERNAME
+        
+        DOCKER_USERNAME = 'd240605d'  
         DOCKER_IMAGE_NAME = 'comp367-lab2-welcome-web'
         DOCKER_IMAGE_TAG = '1.3'
     }
